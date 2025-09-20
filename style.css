@@ -60,7 +60,7 @@ html, body {
 #welcomeScreen .logoImage {
   width: 200px;
   height: auto;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
   animation: logoGlow 1.5s ease-in-out infinite alternate;
 }
 
@@ -83,13 +83,13 @@ html, body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Into Screen (Login / SignUp) */
+/* Pantalla Login / SignUp */
 .intoScreen {
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   width: 90%;
   max-width: 450px;
   padding: 50px;
@@ -102,31 +102,20 @@ html, body {
   position: relative;
 }
 
-.intoScreen .logoWrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+.intoScreen input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  backdrop-filter: blur(10px);
 }
 
-.intoScreen .logoImage {
-  width: 200px;
-  height: auto;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
-  animation: logoGlow 1.5s ease-in-out infinite alternate;
-}
-
-.intoScreen .logoSmall {
-  font-size: 50px;
-  color: #0a84ff;
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: logoSmallAnim 1.5s forwards;
-}
-
-@keyframes logoSmallAnim {
-  0% { opacity: 0; transform: translateY(-20px) rotate(-15deg); }
-  50% { opacity: 0.7; transform: translateY(-5px) rotate(5deg); }
-  100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+.intoScreen input::placeholder {
+  color: rgba(255,255,255,0.7);
 }
 
 @keyframes fadeSlide {
@@ -134,7 +123,7 @@ html, body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Botones ultra interactivos con efecto ripple */
+/* Botones interactivos */
 .buttonWrapper {
   position: relative;
   display: inline-block;
@@ -184,7 +173,6 @@ html, body {
   box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
 
-/* Colores de botones */
 .btn-primary {
   background: linear-gradient(45deg,#0a84ff,#5ac8fa);
   box-shadow: 0 0 15px #0a84ff;
@@ -192,7 +180,7 @@ html, body {
 
 .btn-primary:hover {
   transform: scale(1.1) rotate(1deg);
-  box-shadow: 0 0 25px #0a84ff, 0 0 35px #5ac8fa;
+  box-shadow: 0 0 25px #0a84ff,0 0 35px #5ac8fa;
 }
 
 .btn-secondary {
@@ -202,66 +190,52 @@ html, body {
 
 .btn-secondary:hover {
   transform: scale(1.1) rotate(-1deg);
-  box-shadow: 0 0 25px #ff2d55, 0 0 35px #ff9500;
+  box-shadow: 0 0 25px #ff2d55,0 0 35px #ff9500;
 }
 
 /* Dashboard */
-.dashboard-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(0,0,0,0.7);
+.dashboard {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  backdrop-filter: blur(30px);
+  background: rgba(255,255,255,0.05);
+  border-radius: 25px;
   display: flex;
-  align-items: center;
-  padding: 0 20px;
-  z-index: 5;
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+  z-index: 2;
 }
 
 .profile {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-.profile-pic {
-  width: 50px;
-  height: 50px;
+.profileImage {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  border: 2px solid #0a84ff;
 }
 
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-
-#changePasswordBtn {
-  margin-left: 20px;
-  padding: 8px 12px;
+.pdaButtons button {
+  padding: 16px 30px;
+  margin: 5px;
+  border-radius: 20px;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
-  background: #0a84ff;
+  font-size: 16px;
   color: white;
+  background: linear-gradient(45deg,#0a84ff,#5ac8fa);
   transition: all 0.3s;
 }
 
-#changePasswordBtn:hover {
+.pdaButtons button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #0a84ff;
-}
-
-.dashboard-main {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  gap: 30px;
-}
-
-.pda-buttons button {
-  margin: 10px;
+  box-shadow: 0 0 20px #0a84ff,0 0 30px #5ac8fa;
 }
