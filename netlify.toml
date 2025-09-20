@@ -1,17 +1,14 @@
 [build]
-  publish = "."          # Directorio raíz
-  command = ""           # No necesitamos comando de build si es HTML/CSS/JS puro
+  publish = "."
+  command = ""
 
 [dev]
   port = 8888
 
-# Redirecciones (opcional, útil si quieres proteger rutas)
 [[redirects]]
   from = "/dashboard.html"
   to = "/index.html"
   status = 200
-  conditions = {Role = "authenticated"}  # Esto es solo ejemplo, Netlify Identity necesario
 
-# Funciones serverless
 [functions]
   directory = "functions"
