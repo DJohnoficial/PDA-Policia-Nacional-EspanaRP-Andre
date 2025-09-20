@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDA España RP - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fondo dinámico -->
+  <div id="bg"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- Bienvenida -->
+  <div id="welcomeScreen">
+    <div class="logoWrapper">
+      <img src="assets/logo.png" alt="Logo PDA RP" class="logoImage">
+    </div>
+    <div class="welcomeText">Bienvenid@ al PDA España RP</div>
+  </div>
+
+  <!-- Login / Sign Up -->
+  <div class="intoScreen" id="intoScreen">
+    <div class="logoWrapper">
+      <img src="assets/logo.png" alt="Logo PDA RP" class="logoImage">
+    </div>
+
+    <!-- Formulario -->
+    <form id="authForm">
+      <input type="email" id="email" placeholder="Correo electrónico" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+
+      <div class="buttonWrapper">
+        <button type="submit" class="btn-primary" id="signUpBtn">Sign Up</button>
+        <span class="ripple"></span>
+      </div>
+
+      <div class="buttonWrapper">
+        <button type="button" class="btn-secondary" id="loginBtn">Login</button>
+        <span class="ripple"></span>
+      </div>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="particles.js"></script>
+</body>
+</html>
