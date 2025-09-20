@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PDA España RP - Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDA Policial</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 </head>
 <body>
-  <!-- Fondo dinámico (puede ser el mismo que en login) -->
-  <div id="bg"></div>
-  <canvas id="particles"></canvas>
 
-  <!-- Barra superior -->
-  <header class="dashboard-header">
-    <div class="profile" id="profileMenu">
-      <img src="assets/logo.png" alt="Foto de perfil" class="profile-pic">
-      <div class="profile-info">
-        <span id="profileName">Usuario</span>
-        <span id="profileEmail">email@gmail.com</span>
-      </div>
-      <button id="changePasswordBtn">Cambiar contraseña</button>
-    </div>
-  </header>
+<div id="bg"></div>
+<canvas id="particles"></canvas>
 
-  <!-- Panel principal del PDA -->
-  <main class="dashboard-main">
-    <h1>PDA Policial - Panel Principal</h1>
-    
-    <div class="pda-buttons">
-      <button class="btn-primary">Ver reportes</button>
-      <button class="btn-primary">Registrar incidencia</button>
-      <button class="btn-primary">Buscar ciudadanos</button>
-      <button class="btn-primary">Historial de multas</button>
-      <button class="btn-primary">Administración</button>
-    </div>
-  </main>
+<div class="dashboard">
+  <div class="profile">
+    <img src="assets/logo.png" alt="Perfil" class="profileImage">
+    <div id="profileName"></div>
+    <div id="profileEmail"></div>
+    <button id="changePasswordBtn">Cambiar Contraseña</button>
+  </div>
 
-  <script src="dashboard.js"></script>
-  <script src="particles.js"></script>
+  <div class="pdaButtons">
+    <button>Reportes</button>
+    <button>Incidencias</button>
+    <button>Historial</button>
+    <button>Usuarios</button>
+  </div>
+</div>
+
+<script src="particles.js"></script>
+<script src="dashboard.js"></script>
 </body>
 </html>
